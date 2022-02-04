@@ -80,3 +80,10 @@ body {
 [contenteditable] {
     outline: 0px solid transparent;
 }
+
+@media (hover: none) {
+    body {
+        font-size: 1.5em;
+    }
+  }
+  
