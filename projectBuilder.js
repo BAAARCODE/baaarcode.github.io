@@ -8,7 +8,7 @@ for (var i = 0; i < projects.length; i++)
 
 function addProject(projectInfo)
 {
-    var templateFirst, templatePagesUrl, templateRepoUrl, templateEnd;
+    var template = [];
 
     var projectname = projectInfo.projectname;
     var imagename = projectInfo.imagename;
@@ -17,13 +17,35 @@ function addProject(projectInfo)
     var pagesurl = projectInfo.pagesurl;
     var repourl = projectInfo.repourl;
 
-    templateFirst = `
+    template[0] = `
         <div class="project">
+    `
+    if (pagesurl != "")
+        template[1]= `
             <a href="${pagesurl}">
+
+        `;
+    else
+        template[1] = `
+            <a href="${repourl}">
+
+        `;
+    template[2] = `
                 <img src="images/${imagename}.png">
             </a>
             <div class="spacer">
-                <a href="${pagesurl}">
+    `;
+    if (pagesurl != "")
+        template[3]= `
+            <a href="${pagesurl}">
+
+        `;
+    else
+        template[3] = `
+            <a href="${repourl}">
+
+        `;
+    template[4] = `
                     <div class="project-title">${projectname}</div>
                 </a>
                 <div>${techstack}</div>
@@ -35,7 +57,7 @@ function addProject(projectInfo)
     `;
 
     if (pagesurl != "")
-        templatePagesUrl = `
+        template[5] = `
                 <a href="${pagesurl}">
                     <div class="buttondiv">
                         Website
@@ -43,10 +65,10 @@ function addProject(projectInfo)
                 </a>
         `;
     else
-        templatePagesUrl = "";
+        template[5] = "";
 
     if (repourl != "")
-        templateRepoUrl = `
+        template[6] = `
                 <a href="${repourl}">
                     <div class="buttondiv">
                         GitHub
@@ -54,12 +76,12 @@ function addProject(projectInfo)
                 </a>
         `;
     else
-        templateRepoUrl = "";
+        template[6] = "";
 
-    templateEnd = `
+    template[7] = `
             </div>
         </div>
     `;
 
-    projectcontainer.innerHTML = projectcontainer.innerHTML + templateFirst + templatePagesUrl + templateRepoUrl + templateEnd;
+    projectcontainer.innerHTML = projectcontainer.innerHTML + template.join("");
 }
