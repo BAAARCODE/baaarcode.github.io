@@ -31,7 +31,7 @@ function addProject(projectInfo)
 
         `;
     template[2] = `
-                <img src="images/${imagename}.png">
+                <img src="images/${imagename}.jpg">
             </a>
             <div class="spacer">
     `;
