@@ -1,5 +1,13 @@
 var projects = [
     {
+        projectname: "Lean Autograder",
+        imagename: "lean",
+        description: "Automatic grading script for Lean mathematical proofs.",
+        techstack: "Python",
+        pagesurl: "",
+        repourl: "https://github.com/BAAARCODE/lean-autograder"
+    },
+    {
         projectname: "ANSItron",
         imagename: "ansitron",
         description: "Rich text editor that converts user-generated HTML to ANSI.",
@@ -14,13 +22,5 @@ var projects = [
         techstack: "JavaScript",
         pagesurl: "https://baaarcode.github.io/linalg-lab",
         repourl: "https://github.com/BAAARCODE/linalg-lab"
-    },
-    {
-        projectname: "Shoutout Bot",
-        imagename: "shoutout",
-        description: "Chatbot that sends a personalized message of appreciation on command.",
-        techstack: "Java",
-        pagesurl: "",
-        repourl: "https://github.com/BAAARCODE/shoutout-bot"
     }
 ]
