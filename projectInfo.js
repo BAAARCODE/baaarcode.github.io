@@ -1,5 +1,13 @@
 var projects = [
     {
+        projectname: "HigherScoringWord",
+        imagename: "word",
+        description: "Quick, online multiplayer word game in your browser.",
+        techstack: "Python, JS",
+        pagesurl: "https://hsw.baaarco.de/",
+        repourl: ""
+    },
+    {
         projectname: "Lean Autograder",
         imagename: "lean",
         description: "Automatic grading script for Lean mathematical proofs.",
